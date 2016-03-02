@@ -1,0 +1,18 @@
+---
+- name: ansibleserver
+  box: CentOS6
+  ram: 512
+  ip: 192.168.100.30
+  nettype: private_network
+  subnet: vboxnet0
+  - folders:
+    { guest: 'ansible', host: '/var/lib/awx' }
+  provision_script: 'srv/provision/provision.sh'
+- name: ansibleclient
+  box: CentOS6
+  ram: 512
+  ip: 192.168.100.31
+  nettype: private_network
+  subnet: vboxnet0
+  provision_script: 'srv/provision/provision.sh'
+
