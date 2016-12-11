@@ -1,18 +1,26 @@
 ---
-- name: ansibleserver
-  box: CentOS6
-  ram: 512
-  ip: 192.168.100.30
+- name: orc-app1.dev
+  vm_name: app1
+  box: centos7.2
+  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/centos7/centos7.json"
+  ip: 192.168.100.10
   nettype: private_network
   subnet: vboxnet0
-  - folders:
-    { guest: 'ansible', host: '/var/lib/awx' }
-  provision_script: 'srv/provision/provision.sh'
-- name: ansibleclient
-  box: CentOS6
   ram: 512
-  ip: 192.168.100.31
+- name: orc-app2.dev
+  vm_name: app2
+  box: "centos7.2"
+  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/centos6/centos6.json"
+  ip: 192.168.100.11
   nettype: private_network
   subnet: vboxnet0
-  provision_script: 'srv/provision/provision.sh'
+  ram: 512
+- name: orc-db.dev
+  vm_name: db
+  box: "centos7.2"
+  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/centos6/centos6.json"
+  ip: 192.168.100.12
+  nettype: private_network
+  subnet: vboxnet0
+  ram: 512
 
