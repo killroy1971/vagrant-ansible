@@ -1,0 +1,11 @@
+---
+
+- name: update_packages_yum
+  yum:
+    name: '*'
+    state: latest
+
+- name: update_packages_dnf
+  dnf:
+    name: '*'
+    state: latest

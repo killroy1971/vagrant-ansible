@@ -1,0 +1,4 @@
+---
+- include: add_packages.yml
+- include: root_setup.yml
+- include: ntp.yml

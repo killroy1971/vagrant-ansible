@@ -1,0 +1,6 @@
+---
+- name: VAGRANT | Provision OS
+  hosts: all
+  roles:
+    - common
+

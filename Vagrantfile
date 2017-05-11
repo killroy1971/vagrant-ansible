@@ -28,9 +28,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.memory = servers["ram"]
       end
       srv.vm.provision "ansible" do |a|
-        a.limit = servers["name"]
+        a.playbook = "provision.yml"
         a.verbose = "v"
-        a.playbook = "playbooks/ntp.yml"
+        a.host_key_checking = false
+        a.extra_vars = { ansible_ssh_user: 'vagrant' }
+        a.sudo = true
       end
     end
   end

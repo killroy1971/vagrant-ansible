@@ -1,0 +1,9 @@
+---
+package_list:
+  - libselinux-python
+  - vim
+  - git
+  - tmux
+  - screen
+  - chrony
+

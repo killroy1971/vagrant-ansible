@@ -1,0 +1,18 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ls='/bin/ls -F'
+alias ll='/bin/ls -Flh'
+alias la='/bin/ls -Fa'
+alias df='/bin/df -h'
+alias vi='/usr/bin/vim'
+alias grep='/bin/grep --color'
+

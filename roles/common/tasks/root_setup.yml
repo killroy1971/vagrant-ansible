@@ -1,0 +1,17 @@
+---
+- name: Set root's bahsrc file to one that is easier to live with
+  copy:
+    src: root_bashrc
+    dest: /root/.bashrc
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Create root's vimrc so hacking as root is easier to live with
+  copy:
+    src: root_vimrc
+    dest: /root/.vimrc
+    owner: root
+    group: root
+    mode: 0644
+
