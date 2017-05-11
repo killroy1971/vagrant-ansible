@@ -12,3 +12,11 @@ Setup
 - Edit the machine_define.yml file to match your desired machine characteristics
 - Add roles to the roles/directory
 - Update provision.yml to execute desired roles
+
+License
+-------
+MIT
+
+Author
+------
+Glenn H. Snead
