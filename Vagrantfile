@@ -9,7 +9,7 @@ VAGRANTFILE_API_VERSION = "2"
 require 'yaml'
  
 # Read YAML file with box details
-machines = YAML.load_file(File.join(File.dirname(__FILE__), 'machine_define.yaml'))
+machines = YAML.load_file(File.join(File.dirname(__FILE__), 'machine_define.yml'))
  
 # Create boxes
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|

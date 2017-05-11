@@ -9,5 +9,6 @@ this isn't the project for you.
 
 Setup
 -----
-- Edit the ansible hosts file ./inventory/hosts:
-  Add all of the ip addresses to this file approprite groups
+- Edit the machine_define.yml file to match your desired machine characteristics
+- Add roles to the roles/directory
+- Update provision.yml to execute desired roles
