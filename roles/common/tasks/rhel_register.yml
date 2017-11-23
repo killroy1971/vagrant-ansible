@@ -1,0 +1,15 @@
+---
+- name: Register with Red Hat network
+  redhat_subscription:
+    state: present
+    username: "{{ rhn_user }}"
+    password: "{{ rhn_pass }}"
+    pool_ids: "{{ rhn_employee_sku }}"
+    autosubscribe: false
+
+- name:  Disable all repositories - Basic Server Type
+  command: subscription-manager repos --disable="*"
+
+- name:  Enable RedHat repositories - Basic Server Type
+  command: "subscription-manager repos --enable='{{ item }}'"
+  with_items: '{{ rhn_repo_list }}'

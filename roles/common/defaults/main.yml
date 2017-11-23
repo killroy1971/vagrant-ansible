@@ -7,3 +7,9 @@ package_list:
   - screen
   - chrony
 
+rhn_default_repo_list:
+  - rhel-7-server-rpms
+  - rhel-7-server-supplementary-rpms
+  - rhel-7-server-optional-rpms
+  - rhel-7-server-extras-rpms
+
