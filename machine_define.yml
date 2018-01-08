@@ -1,9 +1,9 @@
 ---
-- name: centos7
-  vm_name: centos7
-  box: centos/7
-  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/centos7/centos7.json"
-  ip: 192.168.100.10
+- name: rhel7
+  vm_name: rhel7
+  box: generic/rhel
+  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/rhel7/rhel7.json"
+  ip: 192.168.100.100
   nettype: private_network
   subnet: vboxnet0
   ram: 1024
