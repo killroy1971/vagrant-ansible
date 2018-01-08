@@ -6,10 +6,17 @@ package_list:
   - tmux
   - screen
   - chrony
+  - zsh
+  - dkms
 
 rhn_default_repo_list:
   - rhel-7-server-rpms
   - rhel-7-server-supplementary-rpms
   - rhel-7-server-optional-rpms
   - rhel-7-server-extras-rpms
+
+epel7_repository:
+  - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+revolv_servers: "208.67.222.222"
 

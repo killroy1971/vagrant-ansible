@@ -1,0 +1,10 @@
+---
+
+- name: Confiugre resolv.conf
+  blockinfile:
+    path: /etc/resolv.conf
+    insertafter: EOF
+    block: |
+      nameserver {{ revolv_servers }}
+
+

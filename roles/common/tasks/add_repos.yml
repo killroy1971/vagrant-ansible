@@ -1,0 +1,9 @@
+---
+- name: Add EPEL (RHEL/CentOS 7) Repository
+  yum:
+    name: "{{ epel7_repository }}"
+    state: present
+  when:
+    - ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+    - ansible_distribution_major_version == "7"
+

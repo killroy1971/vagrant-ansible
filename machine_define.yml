@@ -1,18 +1,9 @@
 ---
-- name: app1
-  vm_name: app1
-  box: samdoran/rhel7
+- name: centos7
+  vm_name: centos7
+  box: centos/7
   boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/centos7/centos7.json"
   ip: 192.168.100.10
   nettype: private_network
   subnet: vboxnet0
-  ram: 512
-- name: app2
-  vm_name: app2
-  box: samdoran/rhel7
-  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/centos6/centos6.json"
-  ip: 192.168.100.11
-  nettype: private_network
-  subnet: vboxnet0
-  ram: 512
-
+  ram: 1024

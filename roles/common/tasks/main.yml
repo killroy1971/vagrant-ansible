@@ -1,7 +1,9 @@
 ---
+- include: resolv.yml
 - include: rhel_register.yml
   when:
     - ansible_distribution == "RedHat"
+- include: add_repos.yml
 - include: add_packages.yml
 - include: root_setup.yml
 - include: ntp.yml

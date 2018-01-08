@@ -12,6 +12,9 @@ Setup
 - Edit the machine_define.yml file to match your desired machine characteristics
 - Add roles to the roles/directory
 - Update provision.yml to execute desired roles
+- Edit Vagrantfile: Set config.vbguest.auto_update to false if you don't want to 
+  update the Virtualbox Guest Additions installation.  Comment out if you are 
+  using a different hypervisor, or the vagrant-vbguest plugin isn't installed.
 
 License
 -------

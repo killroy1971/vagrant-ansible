@@ -20,7 +20,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define servers["name"] do |srv|
       srv.vm.box = servers["box"]
       srv.vm.box_check_update = false
-      srv.vm.box_url = servers["boxurl"]
+#     srv.vm.box_url = servers["boxurl"]
+      config.vbguest.auto_update = false
       srv.vm.hostname = servers["name"]
       srv.vm.network "private_network", ip: servers["ip"], name: servers["subnet"]
       srv.vm.provider :virtualbox do |vb|
