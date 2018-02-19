@@ -6,5 +6,6 @@
     insertafter: EOF
     block: |
       nameserver {{ revolv_servers }}
+  ignore_errors: true
 
 

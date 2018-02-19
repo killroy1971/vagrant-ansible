@@ -1,7 +1,18 @@
 ---
-- name: Ensure chrony service is running.
+- name: Ensure chrony service is running (CentOS / REHL 7)
   service: 
     name: chronyd 
     enabled: yes
     state: started 
+  when:
+    - ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+    - ansible_distribution_major_version == "7"
 
+- name: Ensure ntpd service is running (CentOS / RHEL 6)
+  service: 
+    name: ntpd
+    enabled: yes
+    state: started 
+  when:
+    - ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
+    - ansible_distribution_major_version == "6"

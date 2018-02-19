@@ -33,7 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         a.verbose = "v"
         a.host_key_checking = false
         a.extra_vars = { ansible_ssh_user: 'vagrant' }
-        a.sudo = true
+        a.become = true
       end
     end
   end
