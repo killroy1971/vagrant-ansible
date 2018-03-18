@@ -6,6 +6,8 @@ package_list:
   - tmux
   - screen
   - chrony
+  - zsh
+  - dkms
 
 rhn_default_repo_list:
   - rhel-7-server-rpms
@@ -14,4 +16,10 @@ rhn_default_repo_list:
   - rhel-7-server-extras-rpms
 
 nameserver: "192.168.4.10"
+
+epel7_repository:
+  - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+epel6_repository:
+  - https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
 

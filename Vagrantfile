@@ -20,9 +20,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define servers["name"] do |srv|
       srv.vm.box = servers["box"]
       srv.vm.box_check_update = false
-      srv.vm.box_url = servers["boxurl"]
+#     srv.vm.box_url = servers["boxurl"]
+      config.vbguest.auto_update = false
       srv.vm.hostname = servers["name"]
-      srv.vm.network "private_network", ip: servers["ip"], name: servers["subnet"]
+      srv.vm.network "private_network", ip: servers["ip"], name: servers["subnet"], auto_config: false
       srv.vm.provider :virtualbox do |vb|
         vb.name = servers["vm_name"]
         vb.memory = servers["ram"]
@@ -32,7 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         a.verbose = "v"
         a.host_key_checking = false
         a.extra_vars = { ansible_ssh_user: 'vagrant' }
-        a.sudo = true
+        a.become = true
       end
     end
   end

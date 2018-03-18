@@ -1,18 +1,17 @@
 ---
-- name: Ensure chrony service is running (CentOS / REHL 7)
-  service: 
-    name: chronyd 
-    enabled: yes
-    state: started 
+- name: Add EPEL (RHEL/CentOS 7) Repository
+  yum:
+    name: "{{ epel7_repository }}"
+    state: present
   when:
     - ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
     - ansible_distribution_major_version == "7"
 
-- name: Ensure ntpd service is running (CentOS / RHEL 6)
-  service: 
-    name: ntpd
-    enabled: yes
-    state: started 
+- name: Add EPEL (RHEL/CentOS 6) Repository
+  yum:
+    name: "{{ epel6_repository }}"
+    state: present
   when:
     - ansible_distribution == "CentOS" or ansible_distribution == "RedHat"
     - ansible_distribution_major_version == "6"
+

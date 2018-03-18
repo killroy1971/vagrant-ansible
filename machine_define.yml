@@ -14,5 +14,4 @@
   ip: 192.168.100.11
   nettype: private_network
   subnet: vboxnet0
-  ram: 512
-
+  ram: 2048
