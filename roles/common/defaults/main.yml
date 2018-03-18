@@ -13,3 +13,5 @@ rhn_default_repo_list:
   - rhel-7-server-optional-rpms
   - rhel-7-server-extras-rpms
 
+nameserver: "192.168.4.10"
+
