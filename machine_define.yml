@@ -1,18 +1,18 @@
 ---
-- name: ansible
-  vm_name: app1
-  box: centos7.3
-  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/centos7/centos7.json"
-  ip: 192.168.100.20
+- name: server
+  vm_name: CentOS7
+  box: centos/7
+  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/rhel7/rhel7.json"
+  ip: 192.168.100.110
   nettype: private_network
   subnet: vboxnet0
-  ram: 512
+  ram: 2048
 
-- name: stig
-  vm_name: app1
-  box: centos7.3
-  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/centos7/centos7.json"
-  ip: 192.168.100.21
+- name: client
+  vm_name: client
+  box: CentOS7
+  boxurl: "file:///Users/glenn/Learn/Vagrant/Boxes/rhel7/rhel7.json"
+  ip: 192.168.100.111
   nettype: private_network
   subnet: vboxnet0
-  ram: 512
+  ram: 2048

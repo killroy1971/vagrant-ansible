@@ -1,0 +1,8 @@
+---
+- name: Add nameserver entry to resolv.conf
+  lineinfile:
+    path: /etc/resolv.conf
+    insertafter: '^search.*'
+    line: nameserver '{{ nameserver }}'
+    state: present
+
